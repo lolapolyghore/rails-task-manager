@@ -1,0 +1,9 @@
+
+
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+
+
+<%= link_to(task_path(@task), turbo_method: :delete, data: { turbo_confirm: "Are you sure?" }) do %>
+  <i class="fa-solid fa-trash"></i>
+<% end %>
